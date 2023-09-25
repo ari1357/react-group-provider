@@ -1,0 +1,17 @@
+{
+  "name": "@monorepo/eslint-config-custom",
+  "description": "eslintの設定をしてるよ",
+  "private": true,
+  "version": "0.0.0",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "prettier": "^3.0.0"
+  }
+}

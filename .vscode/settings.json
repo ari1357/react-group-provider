@@ -1,0 +1,28 @@
+{
+  // schemaのエラー
+	"json.schemaDownload.enable": true,
+	// 保存時にprettierで整形
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	// eslint設定
+	"eslint.workingDirectories": ["./apps/**"],
+	// vscode folder 非表示
+	"files.exclude": {
+		"**/node_modules": true
+	},
+	// vscodeのカラー設定
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#1b5843",
+    "statusBar.background": "#1b5843",
+    "activityBar.activeBackground": "#1b5843",
+    "activityBar.activeBorder": "#fff"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@monorepo/types",
+  "description": "共通の型を定義してるよ",
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {
+    "@types/react": "^18.2.15"
+  }
+}

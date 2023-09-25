@@ -1,0 +1,6 @@
+{
+  "name": "@monorepo/tsconfig",
+  "description": "tsconfigの設定をしてるよ",
+  "private": true,
+  "version": "0.0.0"
+}

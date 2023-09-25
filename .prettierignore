@@ -1,0 +1,7 @@
+# root
+.prettierrc
+*.json
+# apps
+*.hbs
+# packages
+packages/eslint/index.js

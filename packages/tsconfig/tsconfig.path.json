@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@monorepo/library/*": ["./../../packages/library/*"],
+      "@monorepo/utils": ["./../../packages/utils"]
+    }
+  }
+}

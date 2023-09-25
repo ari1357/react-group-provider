@@ -1,0 +1,14 @@
+{
+	"extends": [
+		"@monorepo/tsconfig/tsconfig.front.json",
+		"@monorepo/tsconfig/tsconfig.path.json"
+	],
+	"compilerOptions": {
+		"baseUrl": "./",
+		"types": [
+			"vite/client",
+    ] 
+	},
+	"include": ["src"],
+	"references": [{ "path": "./tsconfig.node.json" }]
+}
