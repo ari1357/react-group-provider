@@ -25,6 +25,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      react-group-provider:
+        specifier: link:..\..\packages\react-group-provider
+        version: link:../../packages/react-group-provider
     devDependencies:
       '@types/react':
         specifier: ^18.2.15
