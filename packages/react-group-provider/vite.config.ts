@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'node:path';
 import react from '@vitejs/plugin-react-swc';
+import type { InlineConfig } from 'vitest';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -20,5 +21,9 @@ export default defineConfig({
 				}
 			}
 		}
+	},
+	test: {
+		globals: true,
+		environment: 'jsdom'
 	}
 });
