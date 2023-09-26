@@ -16,5 +16,10 @@
     "name": "Ryuta Arimura",
     "email": "arimura1379@gmail.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+		"npm": "please_use_pnpm_instead",
+		"yarn": "please_use_pnpm_instead"
+	},
+	"packageManager": "pnpm@8.6.7"
 }
