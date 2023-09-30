@@ -1,7 +1,6 @@
 // extarnal
-import { ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
-export type GroupProviderProps = {
-	providers: [];
-	children: ReactNode | undefined;
-};
+export type GroupProviderProps = FC<{
+	children: ReactNode;
+}>;

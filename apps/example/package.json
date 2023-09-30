@@ -14,7 +14,8 @@
     "@monorepo/tsconfig": "workspace:^",
     "@monorepo/types": "workspace:^",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-group-provider": "link:..\\..\\packages\\react-group-provider"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
