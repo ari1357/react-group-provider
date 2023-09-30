@@ -1,13 +1,15 @@
+// extarnal
 import { useState } from 'react';
 
+// assets
 import reactLogo from './assets/react.svg';
 
+//
 import viteLogo from '/vite.svg';
 import './App.css';
 
 const App = () => {
 	const [count, setCount] = useState(0);
-	console.log('a');
 
 	return (
 		<>
@@ -37,7 +39,7 @@ const App = () => {
 			</div>
 			<h1>Vite + React</h1>
 			<div className="card">
-				<button onClick={() => setCount(count => count + 1)}>
+				<button onClick={() => setCount(state => state + 1)}>
 					count is {count}
 				</button>
 				<p>
