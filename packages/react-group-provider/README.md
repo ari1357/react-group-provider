@@ -1,27 +1,137 @@
-# React + TypeScript + Vite
+<div style="padding: 4rem 0">
+<div align="center">
+	<h1> React Group Provider </h1>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center" style="margin: 2rem 0 1rem">
+resolve the nest issue with react provider
+</p>
 
-Currently, two official plugins are available:
+<div align="center">
+	<img src="https://img.shields.io/badge/node-v18.16.0-green.svg?logo=node">
+	<img src="https://img.shields.io/badge/npm-v9.5.1-red.svg?logo=npm">
+	<img src="https://img.shields.io/badge/pnpm-v8.6.7-yellow.svg?logo=pnpm">
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</div>
 
-## Expanding the ESLint configuration
+## Table of Contents
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Getting Started
+- Document
+- Example
+- License
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+First install according to the package maneger you are using 
+
+install npm
+
+```
+npm i react-group-provider
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+install yarn
+```
+yarn add react-group-provider
+```
+
+
+install pnpm
+
+```
+pnpm add react-group-provider
+```
+
+## Outline
+
+When providers are nested, it becomes hard to follow, so we'll address that
+
+Normally, it would be as follows
+```
+const App: React.FC = () => {
+  return (
+    <AProvider>
+      <BProvider>
+        <CProvider>
+          <DProvider>
+            <EProvider>
+              <FProvider>
+                <Component />
+              </FProvider>
+            </EProvider>
+          </DProvider>
+        </CProvider>
+      </BProvider>
+    </AProvider>
+  )
+}
+export default App
+```
+
+We resolve that as follows
+```
+const Providers = GroupProvider([StrictMode, ExampleProvider1, ExampleProvider2]);
+
+const DemoComponents = () => {
+  return (
+    <Providers>
+      <App />
+    </Providers>
+  )
+}
+```
+or
+```
+
+const list = [ 
+	StrictMode,
+	ExampleProvider1,
+	ExampleProvider2,
+	ExampleProvider3,
+	ExampleProvider4,
+	ExampleProvider5,
+	ExampleProvider6,
+	ExampleProvider7,
+	ExampleProvider8,
+	ExampleProvider9
+]
+
+const Providers = GroupProvider(list);
+
+const DemoComponents = () => {
+	return (
+		<Providers>
+			<App />
+		</Providers>
+	)
+}
+```
+
+
+## Example
+
+code link 
+./ apps / [example](URL "github link")  
+
+```
+import { StrictMode } from 'react';
+import GroupProvider from 'react-group-provider';
+import ExampleProvider1 from '@/components/~'
+import ExampleProvider2 from '@/components/~'
+
+const Providers = GroupProvider([StrictMode, ExampleProvider1, ExampleProvider2]);
+
+const DemoComponents = () => {
+	return (
+		<Providers>
+			<App />
+		</Providers>
+	)
+}
+
+```
+
+## License
+[MIT](URL "license link")  
