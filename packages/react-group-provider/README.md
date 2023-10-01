@@ -113,7 +113,7 @@ const DemoComponents = () => {
 ## Example
 
 code link 
-./ apps / [example](URL "github link")  
+./ apps / [example](https://github.com/ari1357/react-group-provider/tree/master/apps/example "github link")  
 
 ```
 import { StrictMode } from 'react';
@@ -134,4 +134,4 @@ const DemoComponents = () => {
 ```
 
 ## License
-[MIT](URL "license link")  
+[MIT](https://github.com/ari1357/react-group-provider/blob/master/packages/react-group-provider/LICENSE "license link")  
