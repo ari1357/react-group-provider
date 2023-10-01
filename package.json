@@ -1,22 +1,8 @@
 {
   "name": "react-group-provider",
-  "version": "0.0.0",
-  "description": "resolves provider nesting issues.",
-  "main": "packages/react-group-provider/dist/index.js",
-  "types": "packages/react-group-provider/dist/index.d.ts",
   "scripts": {
     "main": "pnpm -C packages/react-group-provider"
   },
-  "bugs": "https://github.com/ari1357/react-group-provider/issues",
-  "repository": { 
-    "type": "git",
-    "url": "https://github.com/ari1357/react-group-provider"
-  },
-  "author": {
-    "name": "Ryuta Arimura",
-    "email": "arimura1379@gmail.com"
-  },
-  "license": "MIT",
   "engines": {
 		"npm": "please_use_pnpm_instead",
 		"yarn": "please_use_pnpm_instead"
