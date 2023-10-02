@@ -1,6 +1,6 @@
 {
   "name": "react-group-provider",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "type": "module",
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
@@ -21,7 +21,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@monorepo/eslint-config-custom": "link:..\\eslint",
+    "@monorepo/eslint-config-custom": "git+https://github.com/ari1357/react-group-provider/tree/master/packages/eslint",
     "@monorepo/tsconfig": "workspace:^",
     "@monorepo/types": "workspace:^",
     "@testing-library/jest-dom": "^6.1.3",
