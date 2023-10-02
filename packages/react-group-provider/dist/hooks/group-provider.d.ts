@@ -1,4 +1,4 @@
-import type { GroupProviderProps } from '@monorepo/types';
+import type { GroupProviderProps } from '../../node_modules/@monorepo/types';
 /**
  * resolves provider nesting issues
  * @param providers - array provider / not []

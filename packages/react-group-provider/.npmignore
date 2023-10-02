@@ -1,3 +1,5 @@
-/node_modules
 /src
 tsconfig.json
+.eslintrc.cjs
+tsconfig.node.json
+vite.config.ts

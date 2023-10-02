@@ -16,7 +16,7 @@
 	"eslint.workingDirectories": ["./apps/**"],
 	// vscode folder 非表示
 	"files.exclude": {
-		"**/node_modules": true
+		// "**/node_modules": true
 	},
 	// vscodeのカラー設定
   "workbench.colorCustomizations": {

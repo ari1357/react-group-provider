@@ -7,7 +7,7 @@
   "types": "./dist/index.d.ts",
   "description": "resolves provider nesting issues.",
   "bugs": "https://github.com/ari1357/react-group-provider/issues",
-  "repository": { 
+  "repository": {
     "type": "git",
     "url": "https://github.com/ari1357/react-group-provider"
   },
@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "vite build && tsc",
+    "build": "vite build",
     "test": "vitest run"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "jsdom": "^22.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "vite-plugin-dts": "^3.6.0",
     "vite-tsconfig-paths": "^4.2.1",
     "vitest": "^0.34.5"
   },

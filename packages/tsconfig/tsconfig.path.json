@@ -4,8 +4,7 @@
       "@/*": [
         "src/*"
       ],
-      "@monorepo/library/*": ["./../../packages/library/*"],
-      "@monorepo/utils": ["./../../packages/utils"]
+      "@monorepo/types": ["./node_modules/@monorepo/types"]
     }
   }
 }
