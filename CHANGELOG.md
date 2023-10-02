@@ -1,4 +1,7 @@
-# 1.0.2 (2023/10/02)
+# 1.0.3 (2023/10/02)
+fix: @monorepo/eslint-config-custom error
+
+## 1.0.2 (2023/10/02)
 fix: types error build setting
 
 ## 1.0.1 (2023/10/02)
