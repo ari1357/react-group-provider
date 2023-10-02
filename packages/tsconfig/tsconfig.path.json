@@ -4,7 +4,8 @@
       "@/*": [
         "src/*"
       ],
-      "@monorepo/types": ["./node_modules/@monorepo/types"]
+      "@monorepo/types": ["./node_modules/@monorepo/types"],
+      "@monorepo/eslint-config-custom": ["./node_modules/@monorepo/eslint-config-custom"]
     }
   }
 }
