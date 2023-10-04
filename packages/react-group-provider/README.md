@@ -51,21 +51,21 @@ When providers are nested, it becomes hard to follow, so we'll address that
 Normally, it would be as follows
 ```
 const App: React.FC = () => {
-  return (
-    <AProvider>
-      <BProvider>
-        <CProvider>
-          <DProvider>
-            <EProvider>
-              <FProvider>
-                <Component />
-              </FProvider>
-            </EProvider>
-          </DProvider>
-        </CProvider>
-      </BProvider>
-    </AProvider>
-  )
+	return (
+	<AProvider>
+		<BProvider>
+			<CProvider>
+				<DProvider>
+					<EProvider>
+						<FProvider>
+							<Component />
+						</FProvider>
+					</EProvider>
+				</DProvider>
+			</CProvider>
+		</BProvider>
+	</AProvider>
+)
 }
 export default App
 ```
@@ -75,11 +75,11 @@ We resolve that as follows
 const Providers = GroupProvider([StrictMode, ExampleProvider1, ExampleProvider2]);
 
 const DemoComponents = () => {
-  return (
-    <Providers>
-      <App />
-    </Providers>
-  )
+return (
+	<Providers>
+		<App />
+	</Providers>
+)
 }
 ```
 or
@@ -105,7 +105,7 @@ const DemoComponents = () => {
 		<Providers>
 			<App />
 		</Providers>
-	)
+		)
 }
 ```
 
@@ -113,7 +113,7 @@ const DemoComponents = () => {
 ## Example
 
 code link 
-./ apps / [example](https://github.com/ari1357/react-group-provider/tree/master/apps/example "github link")  
+./ apps / [example](https://github.com/ari1357/react-group-provider/tree/master/apps/example "github link")
 
 ```
 import { StrictMode } from 'react';
@@ -134,4 +134,4 @@ const DemoComponents = () => {
 ```
 
 ## License
-[MIT](https://github.com/ari1357/react-group-provider/blob/master/packages/react-group-provider/LICENSE "license link")  
+[MIT](https://github.com/ari1357/react-group-provider/blob/master/packages/react-group-provider/LICENSE "license link")
