@@ -2,7 +2,8 @@ name: Deplog GitHub Pages
 
 on: 
   push:
-    branches: ['master']
+    branches: 
+      - master
 
 permissions:
   contents: read
@@ -14,6 +15,10 @@ concurrency:
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
+    - uses: pnpm/action-setup@v2.2.2
+      with:
+        version: 8.6.7
     - run: pnpm ci
     - run: pnpm exsample run build
 
