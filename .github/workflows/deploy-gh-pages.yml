@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  test_and_build_and_deploy:
     runs-on: ubuntu-latest
     - uses: pnpm/action-setup@v2.2.2
       with:
