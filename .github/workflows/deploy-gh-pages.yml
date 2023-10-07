@@ -1,35 +1,33 @@
-name: Deplog GitHub Pages
+name: deploy
 
-on: 
+on:
   push:
-    branches: 
-      - master
-
-permissions:
-  contents: read
-  pages: write¥
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - uses: actions/checkout@v2
       - uses: pnpm/action-setup@v2.2.2
         with:
           version: 8.6.7
-          
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version-file: ".node-version"
+          node-version-file: '.node-version'
           cache: pnpm
 
       - name: Install dependencies
         run: pnpm install
-      - run: pnpm exsample run build
 
-      - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with: 
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./apps/exsample/build
+      - name: Build App
+        run: pnpm exsample run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
