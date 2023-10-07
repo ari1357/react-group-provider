@@ -1,6 +1,7 @@
 {
   "name": "react-group-provider",
   "scripts": {
+    "exsample": "pnpm -C apps/example",
     "main": "pnpm -C packages/react-group-provider"
   },
   "engines": {
