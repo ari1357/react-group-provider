@@ -7,23 +7,29 @@ on:
 
 permissions:
   contents: read
-  pages: write
-
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
+  pages: write¥
 
 jobs:
-  test_and_build_and_deploy:
+  build:
     runs-on: ubuntu-latest
-    - uses: pnpm/action-setup@v2.2.2
-      with:
-        version: 8.6.7
-    - run: pnpm ci
-    - run: pnpm exsample run build
+    steps: 
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 8.6.7
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version-file: ".node-version"
+          cache: pnpm
 
-    - name: Deploy
-    uses: peaceiris/actions-gh-pages@v3
-    with: 
-      github_token: ${{ secrets.GITHUB_TOKEN }}
-      publish_dir: ./apps/exsample/build
+      - name: Install dependencies
+        run: pnpm install
+      - run: pnpm exsample run build
+
+      - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with: 
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./apps/exsample/build
