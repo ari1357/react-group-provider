@@ -1,0 +1,24 @@
+name: Deplog GitHub Pages
+
+on: 
+  push:
+    branches: ['master']
+
+permissions:
+  contents: read
+  pages: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    - run: pnpm ci
+    - run: pnpm exsample run build
+
+    - name: Deploy
+    uses: peaceiris/actions-gh-pages@v3
+    with: 
+      github_token: ${{ secrets.GITHUB_TOKEN }}
+      publish_dir: ./apps/exsample/build
