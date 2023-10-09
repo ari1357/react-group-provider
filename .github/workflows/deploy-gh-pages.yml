@@ -29,7 +29,18 @@ jobs:
         run: pnpm exsample run build
 
       - name: Deploy to GitHub Pages
+
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+  deploy: 
+    environment: 
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy
+      id: deployment
+      uses: actions/deploy-pages@v1
