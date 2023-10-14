@@ -1,5 +1,6 @@
 {
   "name": "react-group-provider",
+  "homepage": "https://ari1357.github.io/react-group-provider/",
   "scripts": {
     "exsample": "pnpm -C apps/example",
     "main": "pnpm -C packages/react-group-provider"
