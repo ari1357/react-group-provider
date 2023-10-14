@@ -38,8 +38,14 @@ jobs:
     if: github.ref == 'refs/heads/master'
 
     steps:
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Downloading artifact
+        uses: actions/download-artifact@v2
         with:
-          branch: master
-          folder: apps/example/dist
+          name: files
+          path: ./apps/example/dist
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
