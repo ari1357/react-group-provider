@@ -42,4 +42,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: master
-          folder: ./apps/example/dist
+          folder: apps/example/dist
